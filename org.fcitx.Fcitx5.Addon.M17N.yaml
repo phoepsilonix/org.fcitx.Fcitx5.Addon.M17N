@@ -1,13 +1,14 @@
 app-id: org.fcitx.Fcitx5.Addon.M17N
-branch: stable
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//6.9
+sdk: org.kde.Sdk//6.10
 build-extension: true
 separate-locales: false
 build-options:
   prefix: /app/addons/M17N
   prepend-pkg-config-path: /app/addons/M17N/lib/pkgconfig:/app/addons/M17N/share/pkgconfig
+  no-debuginfo: true
+  strip: true
 cleanup:
   - /bin
   - /include
@@ -44,6 +45,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-m17n
-        tag: 5.1.4
+        tag: 5.1.5
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
