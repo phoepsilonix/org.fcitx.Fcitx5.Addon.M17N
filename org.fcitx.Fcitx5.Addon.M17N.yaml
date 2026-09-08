@@ -1,7 +1,7 @@
 app-id: org.fcitx.Fcitx5.Addon.M17N
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//6.10
+sdk: org.kde.Sdk//6.11
 build-extension: true
 separate-locales: false
 build-options:
@@ -33,8 +33,8 @@ modules:
   - name: m17n-db
     sources:
       - type: archive
-        url: https://download-mirror.savannah.gnu.org/releases/m17n/m17n-db-1.8.12.tar.gz
-        sha256: d11ab5820989609d0df303e4211c1f008b665f9b0992a1077bc9f4bd020a29eb
+        url: https://download-mirror.savannah.gnu.org/releases/m17n/m17n-db-1.8.14.tar.gz
+        sha256: 783e1a9440be2c9221cdded9dd9b276a8c51d34559feaf62017aedb5dc43da41
         x-checker-data:
           type: anitya
           project-id: 1869
@@ -45,7 +45,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-m17n
-        tag: 5.1.6
-        commit: afb4cba2c5d75d493ac03ad0ee4790ff7c14a078
+        tag: 5.1.7
+        commit: 1c13c7fdc534b76f09db7ca33f9ad8d53d708131
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
